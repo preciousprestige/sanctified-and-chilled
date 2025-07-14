@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #ddf1e6;
+}
+
+.main-wrapper {
+  background-color: #ffffff;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+h1 {
+  color: #7B2C3C;
+}
+
+h2 {
+  color: #3b6d62;
+}
+
+h3 {
+  color: #7B2C3C;
+}
+
+p {
+  color: #333;
+}
+
+.custom-button {
+  background-color: #ddf1e6;
+  color: #7B2C3C;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-size: 15px;
+  margin: 12px 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #7B2C3C;
+  color: white;
+}
+
+.footer {
+  background-color: #ddf1e6;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid #ccc;
+  margin-top: 60px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center; /* ✅ centers horizontally */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  font-size: 24px;
+  color: #7B2C3C;
+  margin-top: 15px; /* added spacing for balance */
+}
+
+.footer-icons a {
+  color: #7B2C3C;
+  transition: transform 0.2s ease;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.2);
+}
+
+.about-section {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  margin-top: 60px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.tiny-button {
+  background-color: #ddf1e6;
+  color: #7B2C3C;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.tiny-button:hover {
+  background-color: #7B2C3C;
+  color: white;
+}
+
+boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)"
+
+.episode-section {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 20px;
+  margin-top: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.episode-card {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f5fdf7;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
