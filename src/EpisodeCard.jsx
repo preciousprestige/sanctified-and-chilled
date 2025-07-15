@@ -1,6 +1,7 @@
 import React from "react";
+import "./index.css"; // Make sure your styles.css is imported globally or in App.jsx
 
-export default function EpisodeCard({ episode }) {
+export default function EpisodeCard({ episode, index = 0 }) {
   return (
     <div
       style={{
@@ -16,7 +17,15 @@ export default function EpisodeCard({ episode }) {
         alt={episode.title}
         style={{ width: "100%", borderRadius: "14px", marginBottom: "15px" }}
       />
-      <h3 style={{ color: "#7B2C3C" }}>{episode.title}</h3>
+      <h3
+        className="animated-title"
+        style={{
+          color: "#7B2C3C",
+          animationDelay: `${index * 0.15}s`,
+        }}
+      >
+        {episode.title}
+      </h3>
       <p>{episode.description}</p>
       <a href={episode.link} target="_blank" rel="noopener noreferrer">
         <button className="custom-button">Listen Now</button>
