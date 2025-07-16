@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import introImg from "../assets/intro.jpg";
 import logoImg from "../assets/logo.png";
 
 export default function Header({ onSelectSection }) {
@@ -13,7 +12,7 @@ export default function Header({ onSelectSection }) {
         marginBottom: "40px",
         backgroundColor: "#ddf1e6",
         padding: "20px",
-        overflow: "hidden", // ensures overlay stays inside
+        overflow: "hidden",
       }}
     >
       {/* 🍔 Hamburger */}
@@ -40,7 +39,7 @@ export default function Header({ onSelectSection }) {
             position: "absolute",
             top: 55,
             left: 15,
-            backgroundColor: "#b5e4c7", // warm mint green
+            backgroundColor: "#7B2C3C", // maroon
             borderRadius: "10px",
             boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
             zIndex: 10,
@@ -55,7 +54,7 @@ export default function Header({ onSelectSection }) {
             style={{
               padding: "8px 0",
               cursor: "pointer",
-              color: "#7B2C3C",
+              color: "#ffffff",
               fontWeight: "bold",
             }}
           >
@@ -69,7 +68,7 @@ export default function Header({ onSelectSection }) {
             style={{
               padding: "8px 0",
               cursor: "pointer",
-              color: "#7B2C3C",
+              color: "#ffffff",
               fontWeight: "bold",
             }}
           >
@@ -78,35 +77,16 @@ export default function Header({ onSelectSection }) {
         </div>
       )}
 
-      {/* ✅ S & C Label */}
-      <p
+      {/* 🔁 Video Background + Glowing S & C */}
+      <div
         style={{
-          marginBottom: "6px",
-          fontWeight: "bold",
-          color: "#7B2C3C",
-          fontSize: "1.1rem",
+          position: "relative",
+          width: "100%",
+          maxWidth: "100%",
+          margin: "0 auto",
+          overflow: "hidden",
         }}
       >
-        S & C
-      </p>
-
-      {/* ✅ Logo */}
-      <img
-        src={logoImg}
-        alt="Podcast Logo"
-        style={{
-          width: "80px",
-          height: "80px",
-          borderRadius: "50%",
-          marginBottom: "10px",
-          display: "block",
-          marginLeft: "auto",
-          marginRight: "auto",
-        }}
-      />
-
-      {/* ✅ Background Video with Overlay */}
-      <div style={{ position: "relative", maxWidth: "300px", margin: "10px auto" }}>
         <video
           src={`${process.env.PUBLIC_URL}/videos/chill-loop.mp4`}
           autoPlay
@@ -116,70 +96,63 @@ export default function Header({ onSelectSection }) {
           style={{
             width: "100%",
             height: "auto",
-            backgroundColor: "#ddf1e6",
-            opacity: 0.35,
             display: "block",
+            objectFit: "cover",
+            background: "transparent",
+            zIndex: 1,
           }}
         />
-        {/* ✅ Texture Overlay */}
+        {/* ✨ Glowing S & C */}
         <div
           style={{
             position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundImage: "repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 4px)",
-            animation: "moveOverlay 10s linear infinite",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            color: "#b5e4c7", // warm mint green
+            fontWeight: "bold",
+            fontSize: "2.5rem",
+            textShadow: "0 0 8px #b5e4c7, 0 0 20px #b5e4c7",
+            animation: "glow 2.5s ease-in-out infinite alternate",
+            zIndex: 2,
             pointerEvents: "none",
           }}
-        />
+        >
+          S & C
+        </div>
       </div>
 
-      {/* ✅ Title */}
-      <h1 style={{ marginTop: "10px", color: "#7B2C3C" }}>
-        Sanctified & Chilled
-      </h1>
+      {/* ✅ Circular Logo Image */}
+      <img
+        src={logoImg}
+        alt="Podcast Logo"
+        style={{
+          width: "80px",
+          height: "80px",
+          borderRadius: "50%",
+          marginTop: "15px",
+          marginBottom: "10px",
+          display: "block",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
+      />
+
+      {/* ✅ Heart Icon */}
       <p style={{ fontStyle: "italic", color: "#7B2C3C" }}>♡</p>
 
-      {/* ✅ Intro Section */}
-      <div
-        style={{
-          backgroundColor: "#ddf1e6",
-          borderRadius: "20px",
-          padding: "20px",
-          marginTop: "20px",
-          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-        }}
-      >
-        <img
-          src={introImg}
-          alt="Intro"
-          style={{
-            width: "100%",
-            borderRadius: "16px",
-            marginBottom: "20px",
-          }}
-        />
-        <p
-          style={{
-            fontSize: "1.1rem",
-            color: "#7B2C3C",
-            textAlign: "center",
-          }}
-        >
-          Welcome to the Sanctified & Chilled podcast — where peace meets
-          purpose. Listen to faith-filled stories, honest moments, and uplifting
-          conversations.
-        </p>
-      </div>
-
-      {/* 🔁 Texture Animation */}
+      {/* 🔁 Glowing Animation */}
       <style>
         {`
-          @keyframes moveOverlay {
-            from { background-position: 0 0; }
-            to { background-position: 100% 100%; }
+          @keyframes glow {
+            from {
+              text-shadow: 0 0 4px #b5e4c7;
+              transform: translate(-50%, -50%) scale(1);
+            }
+            to {
+              text-shadow: 0 0 20px #b5e4c7, 0 0 30px #b5e4c7;
+              transform: translate(-50%, -50%) scale(1.05);
+            }
           }
         `}
       </style>
