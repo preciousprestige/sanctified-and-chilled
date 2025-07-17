@@ -102,17 +102,18 @@ export default function Header({ onSelectSection }) {
             zIndex: 1,
           }}
         />
-        {/* ✨ Glowing S & C */}
+        {/* ✨ Deep S & C with Glow */}
         <div
           style={{
             position: "absolute",
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            color: "#b5e4c7", // warm mint green
-            fontWeight: "bold",
-            fontSize: "2.5rem",
-            textShadow: "0 0 8px #b5e4c7, 0 0 20px #b5e4c7",
+            color: "#002B36", // deep ink blue
+            fontWeight: "900",
+            fontSize: "3rem",
+            letterSpacing: "0.1rem",
+            textShadow: "0 0 10px #b5e4c7, 0 0 25px #b5e4c7, 0 0 40px #b5e4c7",
             animation: "glow 2.5s ease-in-out infinite alternate",
             zIndex: 2,
             pointerEvents: "none",
@@ -146,11 +147,11 @@ export default function Header({ onSelectSection }) {
         {`
           @keyframes glow {
             from {
-              text-shadow: 0 0 4px #b5e4c7;
+              text-shadow: 0 0 6px #b5e4c7;
               transform: translate(-50%, -50%) scale(1);
             }
             to {
-              text-shadow: 0 0 20px #b5e4c7, 0 0 30px #b5e4c7;
+              text-shadow: 0 0 20px #b5e4c7, 0 0 40px #b5e4c7;
               transform: translate(-50%, -50%) scale(1.05);
             }
           }

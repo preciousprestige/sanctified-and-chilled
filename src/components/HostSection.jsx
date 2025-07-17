@@ -19,7 +19,7 @@ export default function HostSection() {
         }}
       />
       <p style={{ fontSize: "1.05rem", color: "#7B2C3C", lineHeight: "1.6" }}>
-  Hi, I’m <strong>EDIDIONG ISEH</strong> — most people just call me Deedee—the heart and voice behind the S&C Pod.
+  Hi, I’m <strong>Edidiong Iseh</strong> — most people just call me Deedee—the heart and voice behind the S&C Pod.
   My mission is simple and powerful: helping this generation put Christ at the center, where He belongs.
   I’m all about abolishing mundane culture and replacing it with real, Christ-centered truth.
 
@@ -29,7 +29,7 @@ export default function HostSection() {
 </p>
 
 <p style={{ fontSize: "1.05rem", color: "#7B2C3C", lineHeight: "1.6", fontStyle: "italic", marginTop: "20px" }}>
-  welcome to this little godly corner of the internet—where we’re doing life with purpose, together.
+  Welcome to this little godly corner of the internet—where we’re doing life with purpose, together.
   <br />
   <strong>With love, DEEDEE.</strong>
 </p>
