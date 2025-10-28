@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/sanctified-and-chilled/static/css/main.a6b65c7f.css",
-    "main.js": "/sanctified-and-chilled/static/js/main.229502ab.js",
+    "main.js": "/sanctified-and-chilled/static/js/main.341804c4.js",
     "static/js/453.e0bd408f.chunk.js": "/sanctified-and-chilled/static/js/453.e0bd408f.chunk.js",
     "static/media/host.jpg": "/sanctified-and-chilled/static/media/host.49f66783e62c7f48a2bc.jpg",
     "static/media/logo.png": "/sanctified-and-chilled/static/media/logo.2cdf4d94e611013de927.png",
     "static/media/podcast-cover.jpg": "/sanctified-and-chilled/static/media/podcast-cover.2cdf4d94e611013de927.jpg",
     "index.html": "/sanctified-and-chilled/index.html",
     "main.a6b65c7f.css.map": "/sanctified-and-chilled/static/css/main.a6b65c7f.css.map",
-    "main.229502ab.js.map": "/sanctified-and-chilled/static/js/main.229502ab.js.map",
+    "main.341804c4.js.map": "/sanctified-and-chilled/static/js/main.341804c4.js.map",
     "453.e0bd408f.chunk.js.map": "/sanctified-and-chilled/static/js/453.e0bd408f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a6b65c7f.css",
-    "static/js/main.229502ab.js"
+    "static/js/main.341804c4.js"
   ]
 }
