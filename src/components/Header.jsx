@@ -24,8 +24,8 @@ export default function Header({ onSelectSection }) {
           left: 20,
           cursor: "pointer",
           width: "30px",
-          height: "24px",
-          zIndex: 100,
+          height: "70px",
+          zIndex: 200,
         }}
       >
         {/* Top line */}
@@ -72,32 +72,49 @@ export default function Header({ onSelectSection }) {
         />
       </div>
 
-      {/* 📖 Slide & Fade Menu (like DHL, not full screen) */}
+      {/* 🌫️ Transparent Background Overlay (clickable to close) */}
+      {menuOpen && (
+        <div
+          onClick={() => setMenuOpen(false)}
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            backgroundColor: "rgba(255,255,255,0.3)",
+            backdropFilter: "blur(6px)",
+            zIndex: 99,
+            transition: "opacity 0.3s ease",
+            animation: "fadeIn 0.3s ease",
+          }}
+        />
+      )}
+
+      {/* 📖 Slide & Fade Menu (Half Screen, Transparent White) */}
       <div
         style={{
-          position: "absolute",
+          position: "fixed",
           top: 0,
-          left: menuOpen ? "0" : "-220px",
-          height: "100%",
-          width: "220px",
-          backgroundColor: "rgba(123,44,60,0.25)", // translucent maroon
-          backdropFilter: "blur(10px)",
-          borderBottomRightRadius: "15px",
-          borderTopRightRadius: "15px",
+          left: menuOpen ? "0" : "-50vw",
+          height: "100vh",
+          width: "50vw",
+          backgroundColor: "rgba(255,255,255,0.7)",
+          backdropFilter: "blur(12px)",
+          borderRight: "2px solid rgba(123,44,60,0.3)",
           boxShadow: menuOpen
-            ? "4px 0 10px rgba(0,0,0,0.15)"
+            ? "4px 0 10px rgba(0,0,0,0.2)"
             : "0 0 0 rgba(0,0,0,0)",
           transition: "left 0.4s ease, opacity 0.4s ease",
           opacity: menuOpen ? 1 : 0,
-          zIndex: 50,
+          zIndex: 150,
           animation: menuOpen ? "fadeIn 0.4s ease" : "none",
         }}
       >
         <div
           style={{
-            padding: "70px 25px 30px 25px",
+            padding: "90px 30px 30px 30px",
             textAlign: "left",
-            opacity: menuOpen ? 1 : 0,
             transform: menuOpen ? "translateX(0)" : "translateX(-25px)",
             transition: "all 0.4s ease",
           }}
@@ -108,11 +125,11 @@ export default function Header({ onSelectSection }) {
               setMenuOpen(false);
             }}
             style={{
-              padding: "12px 0",
+              padding: "14px 0",
               cursor: "pointer",
-              color: "#fff",
+              color: "#7B2C3C",
               fontWeight: "bold",
-              fontSize: "1.1rem",
+              fontSize: "1.2rem",
               transition: "opacity 0.3s ease",
             }}
           >
@@ -125,11 +142,11 @@ export default function Header({ onSelectSection }) {
               setMenuOpen(false);
             }}
             style={{
-              padding: "12px 0",
+              padding: "14px 0",
               cursor: "pointer",
-              color: "#fff",
+              color: "#7B2C3C",
               fontWeight: "bold",
-              fontSize: "1.1rem",
+              fontSize: "1.2rem",
               transition: "opacity 0.3s ease",
             }}
           >
